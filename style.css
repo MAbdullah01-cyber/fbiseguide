@@ -21,3 +21,21 @@
 .resource-grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));}
 .resource-card p{min-height:78px;}
 .resource-note{margin-top:28px;padding:18px 20px;border:1px solid rgba(0,0,0,.1);border-radius:14px;background:rgba(255,255,255,.7);line-height:1.7;}
+
+/* Premium first-screen landing page */
+.landing-body{margin:0;min-height:100vh;background:radial-gradient(circle at 20% 20%,rgba(65,105,225,.18),transparent 32%),radial-gradient(circle at 80% 75%,rgba(32,201,151,.12),transparent 30%),#07111f;color:#f7fbff;overflow:hidden}
+.landing{min-height:100vh;display:grid;place-items:center;padding:28px;position:relative;box-sizing:border-box}
+.landing-card{width:min(850px,100%);box-sizing:border-box;text-align:center;padding:58px 54px;border:1px solid rgba(255,255,255,.13);border-radius:30px;background:rgba(10,24,42,.78);backdrop-filter:blur(18px);box-shadow:0 30px 90px rgba(0,0,0,.38);position:relative;z-index:2}
+.landing-mark{width:66px;height:66px;border-radius:18px;display:grid;place-items:center;margin:0 auto 22px;background:linear-gradient(135deg,#3b82f6,#14b8a6);font-weight:800;letter-spacing:.08em;box-shadow:0 14px 35px rgba(20,184,166,.2)}
+.landing .eyebrow{letter-spacing:.18em;font-weight:700;font-size:.78rem;opacity:.78;margin-bottom:16px}
+.landing h1{font-size:clamp(2.6rem,6vw,5rem);line-height:1.02;margin:0;font-weight:800;letter-spacing:-.045em}
+.landing h1 span{background:linear-gradient(90deg,#60a5fa,#5eead4);-webkit-background-clip:text;background-clip:text;color:transparent}
+.quote{font-family:Georgia,serif;font-size:clamp(1.35rem,2.5vw,2rem);line-height:1.45;margin:34px auto 8px;max-width:720px;color:#e9f3ff}
+.quote-author{margin:0 0 24px;font-weight:700;color:#8fded3}
+.landing-text{max-width:650px;margin:0 auto 30px;color:#b8c7d9;line-height:1.75;font-size:1.02rem}
+.next-btn{display:inline-flex;align-items:center;gap:12px;padding:15px 24px;border-radius:13px;text-decoration:none;font-weight:800;color:#fff;background:linear-gradient(135deg,#2563eb,#0f766e);box-shadow:0 15px 35px rgba(37,99,235,.24);transition:transform .2s,box-shadow .2s}
+.next-btn:hover{transform:translateY(-2px);box-shadow:0 20px 42px rgba(37,99,235,.32)}
+.next-btn span{font-size:1.25rem}
+.landing-note{font-size:.76rem;color:#8091a6;margin-top:22px}
+.landing-glow{position:absolute;border-radius:999px;filter:blur(60px);opacity:.32}.glow-one{width:220px;height:220px;background:#2563eb;top:8%;left:4%}.glow-two{width:240px;height:240px;background:#14b8a6;right:4%;bottom:5%}
+@media(max-width:600px){.landing{padding:16px}.landing-card{padding:42px 24px;border-radius:24px}.quote{margin-top:26px}.landing-text{font-size:.95rem}}
