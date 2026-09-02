@@ -1,7 +1,7 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Subject | Federal Board Guide</title><link rel="stylesheet" href="style.css"></head><body>
 <header class="top"><div class="wrap nav"><a class="logo" href="index.html">Federal<span>Board</span>Guide</a><nav><a href="index.html">Home</a><a href="index.html#grade9">Grade 9</a><a href="index.html#grade10">Grade 10</a></nav></div></header>
-<main class="section"><div class="wrap"><a class="back" id="back" href="index.html">← Back to subjects</a>
+<main class="section"><div class="wrap"><div class="back-row"><a class="back" id="back" href="grade.html?grade=9">← Back to Assessment Frameworks</a><a class="back" href="index.html">⌂ Main Page</a></div>
 <p class="eyebrow" id="eyebrow">GRADE</p><h1 id="title">Subject</h1><p class="lead">Assessment Framework + Model Question Paper</p>
 <div class="document-card"><div class="pdf-icon">PDF</div><div><h2 id="doc-title">Document</h2><p>Open the uploaded PDF in your browser or download it for offline study.</p></div>
 <div class="actions"><a id="view" class="btn" target="_blank">View PDF</a><a id="download" class="btn ghost" download>Download PDF</a></div></div>
@@ -20,8 +20,8 @@ document.title=s.name+' Grade '+grade+' | Federal Board Guide';
 document.getElementById('eyebrow').textContent='GRADE '+(grade===10?'X · SSC-II':'IX · SSC-I');
 document.getElementById('title').textContent=s.name+' — Grade '+grade;
 document.getElementById('doc-title').textContent=s.name+' Assessment Framework & Model Question Paper';
-document.getElementById('back').textContent='← All Grade '+grade+' subjects';
-document.getElementById('back').href='index.html#grade'+grade;
+document.getElementById('back').textContent='← Back to Grade '+grade+' Assessment Frameworks';
+document.getElementById('back').href='grade.html?grade='+grade;
 const idx=list.findIndex(x=>x.slug===s.slug);
 const prev=list[(idx-1+list.length)%list.length];
 const next=list[(idx+1)%list.length];
