@@ -1,37 +1,21 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Subject | Federal Board Guide</title><link rel="stylesheet" href="style.css"></head><body>
-<header class="top"><div class="wrap nav"><a class="logo" href="index.html">Federal<span>Board</span>Guide</a><nav><a href="index.html">Home</a><a href="index.html#grade9">Grade 9</a><a href="index.html#grade10">Grade 10</a></nav></div></header>
-<main class="section"><div class="wrap"><div class="back-row"><a class="back" id="back" href="grade.html?grade=9">← Back to Assessment Frameworks</a><a class="back" href="index.html">⌂ Main Page</a></div>
-<p class="eyebrow" id="eyebrow">GRADE</p><h1 id="title">Subject</h1><p class="lead">Assessment Framework + Model Question Paper</p>
-<div class="document-card"><div class="pdf-icon">PDF</div><div><h2 id="doc-title">Document</h2><p>Open the uploaded PDF in your browser or download it for offline study.</p></div>
-<div class="actions"><a id="view" class="btn" target="_blank">View PDF</a><a id="download" class="btn ghost" download>Download PDF</a></div></div>
-<div class="subject-nav"><a id="prev" class="btn ghost">← Previous Subject</a><a id="all" class="btn btn-outline">All Subjects</a><a id="next" class="btn ghost">Next Subject →</a></div>
-<div class="related"><h2 id="related-title">Other Subjects</h2><div id="related-grid" class="grid mini-grid"></div></div>
-<div class="tip"><b>Tip:</b> Verify important exam information from official FBISE sources.</div></div></main>
-<footer><div class="wrap foot"><b>FederalBoardGuide</b><span>Independent resource · Not affiliated with FBISE</span></div></footer>
+<title>FBISE Model Paper | Federal Board Guide</title>
+<meta name="description" content="Continue to the official FBISE website for the selected subject's assessment framework and model question paper.">
+<meta name="robots" content="index,follow"><link rel="stylesheet" href="style.css"></head><body>
+<header class="top"><div class="wrap nav"><a class="logo" href="index.html">Federal<span>Board</span>Guide</a><nav><a href="index.html">Home</a><a href="index.html#model-papers">Model Papers</a><a href="index.html#resources">Resources</a></nav></div></header>
+<main class="section"><div class="wrap"><div class="back-row"><a class="back" id="back">← Back to Model Papers</a><a class="back" href="index.html">⌂ Main Page</a></div>
+<p class="eyebrow" id="eyebrow">OFFICIAL FBISE RESOURCE</p><h1 id="title">Model Paper</h1><p class="lead">You are being directed to the official FBISE curriculum and model question paper page.</p>
+<div class="document-card"><div class="pdf-icon">FBISE</div><div><h2 id="doc-title">Official Assessment Framework & Model Question Paper</h2><p>FederalBoardGuide does not host the model paper PDF. Continue to the official FBISE website to view the latest available document.</p></div>
+<div class="actions"><a id="official" class="btn" target="_blank" rel="noopener noreferrer" href="https://www.fbise.edu.pk/curriculum_model_paper.php">Continue to Official FBISE →</a></div></div>
+<div class="tip"><b>Why this page?</b> It provides a simple navigation step before sending students to the official source. We are an independent educational resource and are not affiliated with FBISE.</div>
+</div></main><footer><div class="wrap foot"><b>FederalBoardGuide</b><span>Independent resource · Official source: FBISE</span></div></footer>
 <script>
-const data={"9": [{"name": "Biology", "slug": "biology", "file": "Biology_SSC_I_model_paper_50_percent.pdf"}, {"name": "Chemistry", "slug": "chemistry", "file": "Chemistry_SSC_I_model_paper_50_percent.pdf"}, {"name": "Computer Science", "slug": "computer-science", "file": "Computer_SSC_I_model_paper_50_percent.pdf"}, {"name": "Tarjuma Quran", "slug": "tarjuma-quran", "file": "Final Assessment Framework Tarjuma Quran + Model Question Paper SSC-I.pdf"}, {"name": "Mathematics", "slug": "mathematics", "file": "Maths_SSC_I_model_paper_50_percent.pdf"}, {"name": "Physics", "slug": "physics", "file": "Physics_SSC_I_model_paper_50_percent.pdf"}, {"name": "English", "slug": "english", "file": "Final Assessment Framework + Model Question Paper English SSC-I.pdf"}, {"name": "Urdu", "slug": "urdu", "file": "Final_Assessment_Framework_Model_Question_Paper_Urdu_SSC-I.pdf"}], "10": [{"name": "Biology", "slug": "biology", "file": "Model_Question_Paper_Biology SSC-II.pdf"}, {"name": "Chemistry", "slug": "chemistry", "file": "Model_Question_Paper_Chemistry_SSC_II_2024.pdf"}, {"name": "Computer Science", "slug": "computer-science", "file": "Model_Question_Paper_Computer_Science_SSC_II_2024.pdf"}, {"name": "Tarjuma Quran", "slug": "tarjuma-quran", "file": "MODEL_PAPER_TARJUM_QURAN_10.pdf"}, {"name": "Mathematics", "slug": "mathematics", "file": "Final Assessment Framework + Model Question Paper Mathematics SSC-II.pdf"}, {"name": "Physics", "slug": "physics", "file": "Final Assessment Framework + Model Question Paper Physics SSC-II.pdf"}, {"name": "English", "slug": "english", "file": "Final Assessment Framework + Model Question Paper English SSC-II_compressed.pdf"}]};
-const params=new URLSearchParams(location.search);
-const grade=Number(params.get('grade'))===10 ? 10 : 9;
-const subject=params.get('subject')||'biology';
-const list=data[grade]||data[9];
-const s=list.find(x=>x.slug===subject)||list[0];
-document.title=s.name+' Grade '+grade+' | Federal Board Guide';
-document.getElementById('eyebrow').textContent='GRADE '+(grade===10?'X · SSC-II':'IX · SSC-I');
-document.getElementById('title').textContent=s.name+' — Grade '+grade;
-document.getElementById('doc-title').textContent=s.name+' Assessment Framework & Model Question Paper';
-document.getElementById('back').textContent='← Back to Grade '+grade+' Assessment Frameworks';
+const p=new URLSearchParams(location.search); const grade=Number(p.get('grade'))||9; const subject=(p.get('subject')||'').replace(/-/g,' ');
+const names={9:'Grade 9 · SSC-I',10:'Grade 10 · SSC-II',11:'1st Year · HSSC-I',12:'2nd Year · HSSC-II'};
+const pretty=subject?subject.replace(/\b\w/g,c=>c.toUpperCase()):'Model Paper';
+document.title=pretty+' '+names[grade]+' | Federal Board Guide';
+document.getElementById('eyebrow').textContent=names[grade]+' · OFFICIAL FBISE';
+document.getElementById('title').textContent=pretty+' Model Paper';
+document.getElementById('doc-title').textContent=pretty+' Assessment Framework & Model Question Paper';
 document.getElementById('back').href='grade.html?grade='+grade;
-const idx=list.findIndex(x=>x.slug===s.slug);
-const prev=list[(idx-1+list.length)%list.length];
-const next=list[(idx+1)%list.length];
-document.getElementById('prev').href='subject.html?grade='+grade+'&subject='+prev.slug;
-document.getElementById('next').href='subject.html?grade='+grade+'&subject='+next.slug;
-document.getElementById('all').href='index.html#grade'+grade;
-document.getElementById('related-title').textContent='Other Grade '+grade+' Subjects';
-const rg=document.getElementById('related-grid');
-list.filter(x=>x.slug!==s.slug).forEach(x=>{const a=document.createElement('a');a.className='related-link';a.href='subject.html?grade='+grade+'&subject='+x.slug;a.innerHTML='<span>📘</span><b>'+x.name+'</b><small>Open subject page →</small>';rg.appendChild(a);});
-const path='pdfs/'+encodeURIComponent(s.file);
-document.getElementById('view').href=path;
-document.getElementById('download').href=path;
 </script></body></html>

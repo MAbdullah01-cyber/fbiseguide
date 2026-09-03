@@ -1,30 +1,31 @@
 <!doctype html>
 <html lang="en">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Grade | Federal Board Guide</title><link rel="stylesheet" href="style.css"></head>
+<title>FBISE Model Papers by Class | Federal Board Guide</title>
+<meta name="description" content="Find FBISE Grade 9, Grade 10, 1st Year and 2nd Year model papers and assessment frameworks, then continue to the official FBISE website.">
+<meta name="robots" content="index,follow"><link rel="stylesheet" href="style.css"></head>
 <body>
-<header class="top"><div class="wrap nav"><a class="logo" href="index.html">Federal<span>Board</span>Guide</a><nav><a href="index.html">Home</a><a href="index.html#about">About</a></nav></div></header>
+<header class="top"><div class="wrap nav"><a class="logo" href="index.html">Federal<span>Board</span>Guide</a><nav><a href="index.html">Home</a><a href="index.html#model-papers">Model Papers</a><a href="index.html#resources">Resources</a></nav></div></header>
 <main class="section"><div class="wrap">
 <div class="back-row"><a class="back" href="index.html">← Back to Main Page</a></div>
-<p class="eyebrow" id="eyebrow">GRADE</p><h1 id="title">Model Papers</h1><p class="lead" id="lead">Subject-wise model papers and assessment frameworks.</p>
+<p class="eyebrow" id="eyebrow">FBISE MODEL PAPERS</p><h1 id="title">Model Papers</h1>
+<p class="lead" id="lead">Select a subject to continue to the official FBISE assessment framework and model question paper page.</p>
+<div class="tip"><b>Official source:</b> Federal Board of Intermediate and Secondary Education (FBISE). This page is an independent navigation page and is not affiliated with or endorsed by FBISE.</div>
 <div id="cards" class="grid"></div>
-<div id="empty" class="tip" style="display:none"><b>Coming soon:</b> Papers for this class have not been added yet.</div>
 </div></main>
 <footer><div class="wrap foot"><b>FederalBoardGuide</b><span>© 2026 · Independent student resource</span></div></footer>
 <script>
-const data={
-9:[
-['Biology','biology','Biology_SSC_I_model_paper_50_percent.pdf'],['Chemistry','chemistry','Chemistry_SSC_I_model_paper_50_percent.pdf'],['Computer Science','computer-science','Computer_SSC_I_model_paper_50_percent.pdf'],['Tarjuma Quran','tarjuma-quran','Final Assessment Framework Tarjuma Quran + Model Question Paper SSC-I.pdf'],['Mathematics','mathematics','Maths_SSC_I_model_paper_50_percent.pdf'],['Physics','physics','Physics_SSC_I_model_paper_50_percent.pdf'],['English','english','Final Assessment Framework + Model Question Paper English SSC-I.pdf'],['Urdu','urdu','Final_Assessment_Framework_Model_Question_Paper_Urdu_SSC-I.pdf']],
-10:[
-['Biology','biology','Model_Question_Paper_Biology SSC-II.pdf'],['Chemistry','chemistry','Model_Question_Paper_Chemistry_SSC_II_2024.pdf'],['Computer Science','computer-science','Model_Question_Paper_Computer_Science_SSC_II_2024.pdf'],['Tarjuma Quran','tarjuma-quran','MODEL_PAPER_TARJUM_QURAN_10.pdf'],['Mathematics','mathematics','Final Assessment Framework + Model Question Paper Mathematics SSC-II.pdf'],['Physics','physics','Final Assessment Framework + Model Question Paper Physics SSC-II.pdf'],['English','english','Final Assessment Framework + Model Question Paper English SSC-II_compressed.pdf']],
-11:[],12:[]};
-const params=new URLSearchParams(location.search); const grade=Number(params.get('grade')); const list=data[grade]||[];
+const subjects={
+9:['Biology','Chemistry','Computer Science','English','Mathematics','Physics','Urdu','Islamiyat','Tarjuma Quran'],
+10:['Biology','Chemistry','Computer Science','English','Mathematics','Physics','Urdu','Islamiyat','Pakistan Studies','Tarjuma Quran'],
+11:['Biology','Chemistry','Computer Science','English','Mathematics','Physics','Urdu','Islamiyat','Pakistan Studies','Tarjuma Quran'],
+12:['Biology','Chemistry','Computer Science','English','Mathematics','Physics','Urdu','Pakistan Studies','Tarjuma Quran']};
 const names={9:'Grade 9 · SSC-I',10:'Grade 10 · SSC-II',11:'1st Year · HSSC-I',12:'2nd Year · HSSC-II'};
+const params=new URLSearchParams(location.search); const grade=Number(params.get('grade')); const list=subjects[grade]||subjects[9];
 document.title=names[grade]+' Model Papers | Federal Board Guide';
-document.getElementById('eyebrow').textContent=names[grade]||'MODEL PAPERS';
-document.getElementById('title').textContent=(names[grade]||'Model Papers')+' Model Papers';
-document.getElementById('lead').textContent=list.length?'All available subject-wise Assessment Framework and Model Question Paper PDFs are shown below.':'Papers for this class will appear here when they are added.';
+document.getElementById('eyebrow').textContent=names[grade]+' · OFFICIAL LINKS';
+document.getElementById('title').textContent=names[grade]+' Model Papers';
+document.getElementById('lead').textContent='Choose your subject below. The button will take you directly to the official FBISE curriculum, assessment framework and model question paper page.';
 const cards=document.getElementById('cards');
-list.forEach((x,i)=>{const a=document.createElement('article');a.className='subject-card';const path='pdfs/'+encodeURIComponent(x[2]);a.innerHTML='<div class="subject-icon">📘</div><h3>'+x[0]+'</h3><p>'+names[grade]+' · Assessment Framework + Model Question Paper</p><div class="actions"><a class="btn" href="subject.html?grade='+grade+'&subject='+x[1]+'">Open</a><a class="btn btn-outline" href="'+path+'" target="_blank">PDF</a></div>';cards.appendChild(a);});
-if(!list.length) document.getElementById('empty').style.display='block';
+list.forEach((name,i)=>{const a=document.createElement('article');a.className='subject-card resource-card';a.innerHTML='<div class="subject-icon">📘</div><h3>'+name+'</h3><p>'+names[grade]+' · Assessment Framework & Model Question Paper</p><div class="actions"><a class="btn" target="_blank" rel="noopener noreferrer" href="https://www.fbise.edu.pk/curriculum_model_paper.php">View Official FBISE →</a></div>';cards.appendChild(a);});
 </script></body></html>
