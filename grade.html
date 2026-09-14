@@ -1,31 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>FBISE Model Papers by Class | Federal Board Guide</title>
-<meta name="description" content="Find FBISE Grade 9, Grade 10, 1st Year and 2nd Year model papers and assessment frameworks, then continue to the official FBISE website.">
-<meta name="robots" content="index,follow"><link rel="stylesheet" href="style.css"></head>
-<body>
-<header class="top"><div class="wrap nav"><a class="logo" href="index.html">Federal<span>Board</span>Guide</a><nav><a href="index.html">Home</a><a href="index.html#model-papers">Model Papers</a><a href="index.html#resources">Resources</a><a href="fbise-news.html">Latest News</a></nav></div></header>
-<main class="section"><div class="wrap">
-<div class="back-row"><a class="back" href="index.html">← Back to Main Page</a></div>
-<p class="eyebrow" id="eyebrow">FBISE MODEL PAPERS</p><h1 id="title">Model Papers</h1>
-<p class="lead" id="lead">Select a subject to continue to the official FBISE assessment framework and model question paper page.</p>
-<div class="tip"><b>Official source:</b> Federal Board of Intermediate and Secondary Education (FBISE). This page is an independent navigation page and is not affiliated with or endorsed by FBISE.</div>
-<div id="cards" class="grid"></div>
-</div></main>
-<footer><div class="wrap foot"><b>FederalBoardGuide</b><span>© 2026 · Independent student resource</span></div></footer>
-<script>
-const subjects={
-9:['Biology','Chemistry','Computer Science','English','Mathematics','Physics','Urdu','Islamiyat','Tarjuma Quran'],
-10:['Biology','Chemistry','Computer Science','English','Mathematics','Physics','Urdu','Islamiyat','Pakistan Studies','Tarjuma Quran'],
-11:['Biology','Chemistry','Computer Science','English','Mathematics','Physics','Urdu','Islamiyat','Pakistan Studies','Tarjuma Quran'],
-12:['Biology','Chemistry','Computer Science','English','Mathematics','Physics','Urdu','Pakistan Studies','Tarjuma Quran']};
-const names={9:'Grade 9 · SSC-I',10:'Grade 10 · SSC-II',11:'1st Year · HSSC-I',12:'2nd Year · HSSC-II'};
-const params=new URLSearchParams(location.search); const grade=Number(params.get('grade')); const list=subjects[grade]||subjects[9];
-document.title=names[grade]+' Model Papers | Federal Board Guide';
-document.getElementById('eyebrow').textContent=names[grade]+' · OFFICIAL LINKS';
-document.getElementById('title').textContent=names[grade]+' Model Papers';
-document.getElementById('lead').textContent='Choose your subject below. The button will take you directly to the official FBISE curriculum, assessment framework and model question paper page.';
-const cards=document.getElementById('cards');
-list.forEach((name,i)=>{const a=document.createElement('article');a.className='subject-card resource-card';a.innerHTML='<div class="subject-icon">📘</div><h3>'+name+'</h3><p>'+names[grade]+' · Assessment Framework & Model Question Paper</p><div class="actions"><a class="btn" target="_blank" rel="noopener noreferrer" href="https://www.fbise.edu.pk/curriculum_model_paper.php">View Official FBISE →</a></div>';cards.appendChild(a);});
-</script></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FBISE Model Papers by Class | Federal Board Guide</title><meta name="description" content="Choose Grade 9, Grade 10, 1st Year or 2nd Year for FBISE model papers, assessment frameworks and official resource links."><meta name="robots" content="index,follow"><link rel="canonical" href="https://mabdullah01-cyber.github.io/fbiseguide/"><link rel="stylesheet" href="style.css"></head>
+<body><header class="top"><div class="wrap nav"><a class="logo" href="index.html">Federal<span>BoardGuide</span></a><nav><a class="" href="index.html">Home</a><a class="" href="dashboard.html">Dashboard</a><a class="" href="grade-9.html">Grade 9</a><a class="" href="grade-10.html">Grade 10</a><a class="" href="first-year.html">1st Year</a><a class="" href="second-year.html">2nd Year</a><a class="" href="fbise-news.html">News</a><a class="" href="student-hub.html">Student Hub</a><a class="" href="study-lab.html">Study Lab</a></nav></div></header><main class="section"><div class="wrap"><p class="eyebrow">CLASS DIRECTORY</p><h1>FBISE Model Papers by Class</h1><p class="lead">Choose a class for a dedicated, search-friendly resource page.</p><div class="grid"><article class="subject-card"><h2>Grade 9</h2><a class="btn" href="grade-9.html">Open Grade 9 →</a></article><article class="subject-card"><h2>Grade 10</h2><a class="btn" href="grade-10.html">Open Grade 10 →</a></article><article class="subject-card"><h2>1st Year</h2><a class="btn" href="first-year.html">Open 1st Year →</a></article><article class="subject-card"><h2>2nd Year</h2><a class="btn" href="second-year.html">Open 2nd Year →</a></article></div></div></main>
+<footer class="footer"><div class="wrap foot"><b>Federal Board Guide</b><span>© 2026 · Independent student resource · Not affiliated with FBISE</span></div></footer></body></html>

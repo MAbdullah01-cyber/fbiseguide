@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mabdullah01-cyber.github.io/fbiseguide/sitemap.xml
